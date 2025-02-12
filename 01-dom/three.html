@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM's Work with Chai aur Code</title>
+</head>
+<style>
+    .bg-black {
+        background-color: rgb(48, 47, 47);
+        color: white;
+    }
+</style>
+
+<body class="bg-black">
+    <ul class="language">
+        <li>Javascript</li>
+
+    </ul>
+
+
+</body>
+<script>
+    // ---------Normal FUNCTION -------------//
+    function addLanguage(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+    //    ---------------Optimized Function --------------//
+
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+    addOptiLanguage('c++')
+    addOptiLanguage('c#')
+    addOptiLanguage('c')
+
+    //-----------Edit Value----------//
+
+</script>
+
+</html>
